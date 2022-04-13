@@ -30,6 +30,7 @@ export class Wall extends Tile {
     super(x, y, img);
     this.size = img == Pillar ? 0.6 : 1;
     this.image_rotation = rot;
+    this.wall_collisions = this.get_collision_enum();
   }
 
   get_collision_enum(): Walls {

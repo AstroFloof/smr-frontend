@@ -1,6 +1,7 @@
 import { TILE_SIZE } from '$lib/golf/propTypes';
 
 export class Tile {
+  // x and y are positions on the grid, not real x and y. see draw()
   x: number;
   y: number;
   image: HTMLImageElement;
