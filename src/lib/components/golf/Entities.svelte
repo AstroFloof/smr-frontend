@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { assets } from '$app/paths';
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
   import { Entity } from '$lib/golf/entity';

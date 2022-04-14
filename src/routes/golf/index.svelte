@@ -1,7 +1,4 @@
 <script lang="js">
-  import GolfBall from '$lib/components/golf/GolfBall.svelte';
-
-  import { ball } from '$lib/golf/golfBall';
   import Floor from '$lib/components/golf/Floor.svelte';
   import Walls from '$lib/components/golf/Walls.svelte';
   import { Canvas } from 'svelte-canvas';
@@ -18,6 +15,7 @@
     MWallSquare,
     Sand
   } from '$lib/golf/propTypes';
+  import Entities from '$lib/components/golf/Entities.svelte';
 
   const floor1 = [
     [Foundation1, Sand, Foundation1, Grass, FrictionGrass, FrictionGrass],
@@ -59,8 +57,6 @@
   <Canvas width={960} height={640} bind:clientWidth={width} bind:clientHeight={height}>
     <Floor tiles={floor1} />
     <Walls walls={walls1} />
+    <Entities />
   </Canvas>
-
-  <GolfBall />
-  <p>width {width} height {height} x {ball.x} y {ball.y}</p>
 {/if}
