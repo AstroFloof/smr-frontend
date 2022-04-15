@@ -1,4 +1,3 @@
-import { Tile } from './tile';
 import {
   CWall,
   CWallCorner,
@@ -11,6 +10,7 @@ import {
   Pillar,
   TILE_SIZE
 } from '$lib/golf/propTypes';
+import { Tile } from './tile';
 
 enum Walls {
   N = 1 << 0,

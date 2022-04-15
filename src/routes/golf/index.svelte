@@ -1,9 +1,8 @@
 <script lang="js">
-  import Floor from '$lib/components/golf/Floor.svelte';
-  import Walls from '$lib/components/golf/Walls.svelte';
-  import { Canvas } from 'svelte-canvas';
   import { browser } from '$app/env';
-
+  import Floor from '$lib/components/golf/Floor.svelte';
+  import GolfBall from '$lib/components/golf/GolfBall.svelte';
+  import Walls from '$lib/components/golf/Walls.svelte';
   import {
     CWall,
     CWallCorner,
@@ -15,7 +14,9 @@
     MWallSquare,
     Sand
   } from '$lib/golf/propTypes';
-  import Entities from '$lib/components/golf/Entities.svelte';
+  import { Canvas } from 'svelte-canvas';
+
+  // the level loading should go here instead of hardcoding it
 
   const floor1 = [
     [Foundation1, Sand, Foundation1, Grass, FrictionGrass, FrictionGrass],
@@ -57,6 +58,6 @@
   <Canvas width={960} height={640} bind:clientWidth={width} bind:clientHeight={height}>
     <Floor tiles={floor1} />
     <Walls walls={walls1} />
-    <Entities />
+    <GolfBall size={height / 20} init_x={width / 2} init_y={height / 2} />
   </Canvas>
 {/if}
