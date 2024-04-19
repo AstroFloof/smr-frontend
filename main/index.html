@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
@@ -6,33 +6,39 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <meta http-equiv="content-security-policy" content="">
-	<link rel="modulepreload" href="/smr-frontend/main/_app/immutable/start-b9c60733.js">
-	<link rel="modulepreload" href="/smr-frontend/main/_app/immutable/chunks/vendor-93f46a94.js">
-	<link rel="modulepreload" href="/smr-frontend/main/_app/immutable/chunks/paths-1c47712a.js">
-	<link rel="modulepreload" href="/smr-frontend/main/_app/immutable/chunks/preload-helper-f72398ae.js">
-	<link rel="modulepreload" href="/smr-frontend/main/_app/immutable/chunks/singletons-cdeec3fd.js">
-			<script>
-		if ('serviceWorker' in navigator) {
-			addEventListener('load', function () {
-				navigator.serviceWorker.register('/smr-frontend/main/service-worker.js');
-			});
-		}
-	</script>
+    
+		<link href="/smr-frontend/main/_app/immutable/assets/vendor.oq5aOWfL.css" rel="stylesheet">
+		<link rel="modulepreload" href="/smr-frontend/main/_app/immutable/entry/start.tNwrOyNF.js">
+		<link rel="modulepreload" href="/smr-frontend/main/_app/immutable/chunks/vendor.6XGvI_6f.js">
+		<link rel="modulepreload" href="/smr-frontend/main/_app/immutable/entry/app.A6sSBOVZ.js">
+		<link rel="modulepreload" href="/smr-frontend/main/_app/immutable/chunks/preload-helper.-ShncZYO.js">
   </head>
-  <body>
-    <div>
-		<script type="module" data-sveltekit-hydrate="45h">
-		import { start } from "/smr-frontend/main/_app/immutable/start-b9c60733.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-			paths: {"base":"/smr-frontend/main","assets":"/smr-frontend/main"},
-			session: {},
-			route: true,
-			spa: true,
-			trailing_slash: "never",
-			hydrate: null
-		});
-	</script></div>
+  <body data-theme="custom-theme">
+    <div style="display: contents" class="h-full overflow-hidden">
+			<script>
+				{
+					__sveltekit_154bqf1 = {
+						assets: "/smr-frontend/main",
+						base: "/smr-frontend/main",
+						env: null
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/smr-frontend/main/_app/immutable/entry/start.tNwrOyNF.js"),
+						import("/smr-frontend/main/_app/immutable/entry/app.A6sSBOVZ.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('/smr-frontend/main/service-worker.js');
+						});
+					}
+				}
+			</script>
+		</div>
   </body>
 </html>
